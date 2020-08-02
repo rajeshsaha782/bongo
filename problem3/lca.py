@@ -32,9 +32,9 @@ def lca(node1: Node, node2: Node):
 
     n1d = depth(node1)
     n2d = depth(node2)
-    if n1d>n2d:
+    if n1d > n2d:
         return lca(node1.parent, node2)
-    elif n2d>n1d:
+    elif n2d > n1d:
         return lca(node1, node2.parent)
     return lca(node1.parent, node2.parent)
 
@@ -55,7 +55,6 @@ if __name__ == '__main__':
     node8 = Node(8, node4)
     node9 = Node(9, node4)
     print(lca(node3, node7).value)
-    
 
 """
 Runtime: O(N), where N is the number of depth in the tree. In the worst case, this might be visiting the full depth of the tree.
